@@ -99,3 +99,19 @@ section h2 {
 #economy .articles article a {
     background-color: #ff9f1a;
 }
+
+#entertainment {
+    background-color: #9ac3fb;
+}
+
+#entertainment .articles article a {
+    background-color: #2c6cf5;
+}
+
+#technology {
+    background-color: #f7cbff;
+}
+
+#technology .articles article a {
+    background-color: #f47dff;
+}
