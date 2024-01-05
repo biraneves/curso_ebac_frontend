@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap');
+
+:root {
+    --background-color-0: #aaa;
+    --background-color-1: #eee;
+    --background-color-success: #87ff87;
+    --background-color-error: #f39999;
+    --base-color: #0a0a0a;
+    --success-color: #004b00;
+    --error-color: #4b0000;
+    --border-color-success: #004b00;
+    --border-color-error: #4b0000;
+
+    --base-font: 'Quicksand', sans-serif;
+    --alternate-font: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-0);
+}
+
+.form-container {
+    min-width: 300px;
+    max-width: 500px;
+    width: 33vw;
+    min-height: 100px;
+    padding: 40px;
+    background-color: var(--background-color-1);
+    border: solid 1px var(--base-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input,
+button {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px;
+    padding: 8px;
+    border: solid 1px var(--base-color);
+    border-radius: 5px;
+}
+
+body,
+input {
+    font-family: var(--base-font);
+    font-size: 1.04em;
+    font-weight: 600;
+}
+
+button {
+    font-family: var(--alternate-font);
+    font-size: 1.02em;
+    font-weight: 600;
+    background-color: var(--base-color);
+    color: var(--background-color-1);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--background-color-0);
+}
+
+.message {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.error {
+    background-color: var(--background-color-error);
+    border: solid 1px var(--border-color-error);
+    color: var(--error-color);
+    display: block;
+}
+
+.success {
+    background-color: var(--background-color-success);
+    border: solid 1px var(--border-color-success);
+    color: var(--success-color);
+    display: block;
+}
