@@ -41,7 +41,6 @@ header .container {
 header h1 {
     font-size: 2.25em;
     font-weight: normal;
-    font-family: var(--font-title);
 }
 
 header ul li {
@@ -72,7 +71,6 @@ header ul li a:hover {
 }
 
 #intro h2 {
-    font-family: var(--font-title);
     font-weight: normal;
     font-size: 4em;
     line-height: 76.8px;
@@ -92,4 +90,64 @@ header ul li a:hover {
     margin-bottom: 0px;
     margin-top: 20px;
     color: var(--color-light-default);
+}
+
+#perfil-profissional {
+    background-color: var(--bgcolor-1);
+    color: var(--color-light-default);
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+#perfil-profissional img {
+    order: 1;
+    flex-basis: 35%;
+    width: 370px;
+}
+
+#perfil-profissional div {
+    order: 2;
+    flex-basis: 65%;
+}
+
+#perfil-profissional div h3 {
+    color: var(--color-light-title);
+    font-size: 1.88em;
+    font-weight: normal;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+
+p,
+li {
+    font-family: var(--font-default);
+    font-size: 0.94em;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: all 0.2s linear;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--color-link-hover);
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
 }
