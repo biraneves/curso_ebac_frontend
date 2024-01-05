@@ -92,12 +92,26 @@ header ul li a:hover {
     color: var(--color-light-default);
 }
 
-#perfil-profissional {
+#perfil-profissional, 
+#atuacao, 
+#linux,
+#contato {
+    display: flex;
+    padding: 60px 20px;
+}
+
+#perfil-profissional,
+#linux {
     background-color: var(--bgcolor-1);
     color: var(--color-light-default);
-    display: flex;
     align-items: center;
-    padding: 60px 20px;
+}
+
+#atuacao,
+#contato {
+    background-color: var(--bgcolor-0);
+    color: var(--color-dark-default);
+    align-items: start;
 }
 
 #perfil-profissional img {
@@ -111,12 +125,91 @@ header ul li a:hover {
     flex-basis: 65%;
 }
 
-#perfil-profissional div h3 {
-    color: var(--color-light-title);
+#perfil-profissional div h3,
+#atuacao div h3,
+#linux div h3,
+#contato div h3 {
     font-size: 1.88em;
     font-weight: normal;
     line-height: 39px;
     margin-bottom: 20px;
+}
+
+#perfil-profissional div h3,
+#linux div h3 {
+    color: var(--color-light-title);
+}
+
+#atuacao div h3,
+#contato div h3 {
+    color: var(--color-dark-title);
+}
+
+#atuacao div {
+    flex-basis: 50%;
+}
+
+#linux img {
+    order: 1;
+    flex-basis: 35%;
+    width: 370px;
+}
+
+#linux div {
+    order: 2;
+    flex-basis: 65%;
+}
+
+#contato {
+    justify-content: space-between;
+}
+
+#contato div {
+    flex-basis: 40%;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato-form input,
+#contato-form textarea,
+#contato-form button {
+    padding: 8px;
+    margin-bottom: 4px;
+    font-family: var(--font-default);
+}
+
+#contato-form button {
+    background-color: var(--bgcolor-2);
+    color: var(--color-light-default);
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+}
+
+#contato-form button:hover {
+    background-color: var(--bgcolor-1);
+}
+
+#contato-redes-sociais ul {
+    display: flex;
+    justify-content: start;
+}
+
+#contato-redes-sociais ul li {
+    display: inline;
+    margin: 0 16px;
+}
+
+footer .container {
+    background-color: var(--bgcolor-2);
+    color: var(--color-light-default);
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p,
@@ -146,8 +239,14 @@ a:hover {
 
 ul {
     margin-left: 20px;
+    list-style-type: circle;
 }
 
 li {
     margin-bottom: 12px;
+    
+}
+
+em {
+    font-style: italic;
 }
