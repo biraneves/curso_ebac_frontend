@@ -4,8 +4,34 @@
     <title>EBAC - Lista de Tarefas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
   </head>
   <body>
-  
+    <div class="container">
+      <header>
+        <span class="fa-solid fa-list-check"></span>
+        <h1>Lista de Tarefas</h1>
+        <button type="button">Adicionar +</button>
+      </header>
+      <form>
+        <input type="text" id="tarefa" placeholder="Descrição da tarefa" required> 
+        <button type="submit">Criar</button>
+        <button type="reset" id="cancelar">Cancelar</button>
+      </form>
+      <ul>
+        <li>
+          <span class="fa-regular fa-square"></span>
+          <span class="texto-tarefa">Texto da tarefa</span>
+        </li>
+      </ul>
+      <footer>
+        <p>
+          Projeto desenvolvido durante o curso<br>
+          <strong>Engenheiro Front-End</strong><br>
+          da <a href="https://ebaconline.com.br">EBAC</a>.
+        </p>
+      </footer>
+    </div>
+  <script src="https://kit.fontawesome.com/3448507fd8.js" crossorigin="anonymous"></script>
   </body>
 </html>
