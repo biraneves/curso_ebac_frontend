@@ -108,7 +108,11 @@ li {
   cursor: pointer;
 }
 
-#tarefa-concluida {
+li span:nth-child(1) {
+  margin-right: 10px;
+}
+
+.tarefa-concluida span:nth-child(2) {
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.2);
 }

@@ -8,7 +8,9 @@ $(document).ready(() => {
     e.preventDefault();
 
     const textoTarefa = $('#tarefa').val();
-    const novoItem = $(`<li style="display: none;">${textoTarefa}</li>`);
+    const novoItem = $(`<li style="display: none;"></li>`);
+    $('<span class="fa-regular fa-square"></span>').appendTo(novoItem);
+    $(`<span>${textoTarefa}</span>`).appendTo(novoItem);
     $(novoItem).appendTo('ul');
     $(novoItem).fadeIn();
 
@@ -20,8 +22,9 @@ $(document).ready(() => {
     $('form').slideUp();
   });
 
-  $(document).on('click', 'li', () => {
-    let item = this;
-    $(item).toggleClass('tarefa-concluida');
+  $(document).on('click', 'li', function () {
+    $(this).toggleClass('tarefa-concluida');
+    $(this).children('span:nth-child(1)').toggleClass('fa-regular fa-square');
+    $(this).children('span:nth-child(1)').toggleClass('fa-solid fa-square-check');
   });
 });
