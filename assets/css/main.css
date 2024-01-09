@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300;700&display=swap');
+
+:root {
+  --color-a: rgb(235, 137, 99);
+  --color-b: rgb(242, 219, 176);
+  --color-c: rgb(80, 124, 100);
+  --color-d: rgb(232, 114, 106);
+  --color-e: rgb(249, 196, 42);
+  --color-base-white: #eee;
+  --color-base-black: #222;
+  --color-cancel: rgb(232, 114, 106);
+
+  --font-title: 'Roboto', sans-serif;
+  --font-base: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-e);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  background-color: var(--color-b);
+  border-radius: 10px;
+  box-shadow: 0 0 8px 0 var(--color-a);
+  width: 640px;
+  min-width: 340px;
+  margin: 40px auto 10px auto;
+  padding: 20px;
+}
+
+header {
+  padding: 10px;
+  border-bottom: solid 8px var(--color-d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header span {
+  font-size: 36px;
+  color: var(--color-c);
+  margin-right: 20px;
+}
+
+header h1 {
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--color-c);
+}
+
+header button {
+  margin-left: 20px;
+}
+
+form {
+  background-color: var(--color-a);
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input,
+button {
+  padding: 8px;
+  font-family: var(--font-title);
+  border-radius: 3px;
+  border: none;
+}
+
+input {
+  border: solid 1px var(--color-c);
+  width: 380px;
+  min-width: 200px;
+}
+
+button {
+  background-color: var(--color-c);
+  color: var(--color-base-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+#cancelar {
+  background-color: var(--color-cancel);
+}
+
+button:hover {
+  box-shadow: 0 0 8px 0 var(--color-d);
+}
+
+ul {
+  margin: 20px 0;
+}
+
+li {
+  padding: 10px 0;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.tarefa-completa {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  text-align: center;
+}
+
+footer strong {
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-a);
+  transition: all ease 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
