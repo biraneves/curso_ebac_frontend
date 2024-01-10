@@ -5,8 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
   </head>
-  <body>
-  
+  <body class="container-flex">
+    <div class="container container-flex">
+      <img src="./assets/images/pink-1121216_1280.jpg" alt="Fundo abstrato">
+      <div class="container-flex">
+        <header>
+          <h1>Cadastro</h1>
+        </header>
+        <main>
+          <form class="container-flex">
+            <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" id="telefone" required>
+            <input type="text" name="cpf" id="cpf" required>
+            <input type="text" name="endereco" id="endereco" placeholder="Endereço completo" required>
+            <input type="text" name="cep" id="cep" required>
+            <button type="submit">Enviar</button>
+          </form>
+        </main>
+      </div>
+    </div> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
   </body>
 </html>
