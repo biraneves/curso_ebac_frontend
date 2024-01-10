@@ -1,1 +1,1 @@
-# Exercícios
+# Exercício: Plugins JQuery
