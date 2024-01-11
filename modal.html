@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="assets/css/bs/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>EBAC - Bootstrap Avançado - Modal</title>
+</head>
+<body>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal">Abrir modal</button>
+    <div id="exemplo-modal" class="modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título da modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum deserunt eos sapiente molestiae veritatis facilis provident dignissimos in, rem dolores dicta amet sed vitae id, architecto inventore aliquid aspernatur?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                        Confirmar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bs/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
