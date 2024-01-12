@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
             #corpo {
-                background-color: #ccc;
+                background-color: #eee;
             }
 
             section {
@@ -30,48 +30,32 @@
             <div class="navbar navbar-expand-lg">
                 <div class="container">
                     <h1>Título do site</h1>
-                    <button
-                        type="button"
-                        class="navbar-toggler"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#menu"
-                    >
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <nav
-                        id="menu"
-                        class="collapse navbar-collapse justify-content-end"
-                    >
+                    <nav id="menu" class="collapse navbar-collapse justify-content-end">
                         <ul class="nav navbar-nav nav-pills">
                             <li class="nav-item">
-                                <a href="#inicio" class="nav-link active"
-                                    >Início</a
-                                >
+                                <a href="#inicio" class="nav-link active">Início</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#produtos" class="nav-link"
-                                    >Produtos</a
-                                >
+                                <a href="#produtos" class="nav-link">Produtos</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#promocoes" class="nav-link"
-                                    >Promoções</a
-                                >
+                                <a href="#promocoes" class="nav-link">Promoções</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#contato" class="nav-link">Contato</a>
                             </li>
                         </ul>
                     </nav>
+                    <button type="button" class="btn btn-warning ms-2" id="btn-checar-emails">
+                        Checar caixa de entrada
+                    </button>
                 </div>
             </div>
         </header>
-        <div
-            id="corpo"
-            class="container p-3"
-            data-bs-spy="scroll"
-            data-bs-target="#cabecalho"
-        >
+        <div id="corpo" class="container p-3" data-bs-spy="scroll" data-bs-target="#cabecalho">
             <section id="inicio">
                 <h2>Início</h2>
             </section>
@@ -79,41 +63,20 @@
                 <h2>Produtos</h2>
                 <div class="container">
                     <nav class="nav nav-tabs">
-                        <button
-                            type="button"
-                            class="nav-link active"
-                            data-bs-toggle="tab"
-                            data-bs-target="#aba1"
-                        >
+                        <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#aba1">
                             Eletrônicos
                         </button>
-                        <button
-                            type="button"
-                            class="nav-link"
-                            data-bs-toggle="tab"
-                            data-bs-target="#aba2"
-                        >
+                        <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#aba2">
                             Moda masculina
                         </button>
-                        <button
-                            type="button"
-                            class="nav-link"
-                            data-bs-toggle="tab"
-                            data-bs-target="#aba3"
-                        >
+                        <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#aba3">
                             Moda feminina
                         </button>
                     </nav>
                     <div class="tab-content">
-                        <div class="tab-pane active" id="aba1">
-                            Conteúdo da aba Eletrônicos
-                        </div>
-                        <div class="tab-pane" id="aba2">
-                            Conteúdo da aba Moda masculina
-                        </div>
-                        <div class="tab-pane" id="aba3">
-                            Conteúdo da aba Moda feminina
-                        </div>
+                        <div class="tab-pane active" id="aba1">Conteúdo da aba Eletrônicos</div>
+                        <div class="tab-pane" id="aba2">Conteúdo da aba Moda masculina</div>
+                        <div class="tab-pane" id="aba3">Conteúdo da aba Moda feminina</div>
                     </div>
                 </div>
             </section>
@@ -124,6 +87,29 @@
                 <h2>Contato</h2>
             </section>
         </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div class="toast" id="mensagens-alerta">
+                <header class="toast-header">
+                    <strong>Importante!</strong>
+                    <small class="ms-2">Há 11 minutos</small>
+                    <button type="button" class="btn-close me-2 position-absolute end-0" data-bs-dismiss="toast">
+                </header>
+                <div class="toast-body">
+                    Você possui 10 mensagens não lidas.
+                </div>
+            </div>
+        </div>
         <script src="assets/js/bs/bootstrap.bundle.min.js"></script>
+        <script>
+            const ativadorToast = document.getElementById("btn-checar-emails");
+            const mensagem = document.getElementById("mensagens-alerta");
+
+            if (ativadorToast) {
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(mensagem);
+                ativadorToast.addEventListener("click", () => {
+                    toastBootstrap.show();
+                });
+            }
+        </script>
     </body>
 </html>
