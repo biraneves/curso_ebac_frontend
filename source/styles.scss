@@ -1,0 +1,109 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+@use 'sass:math';
+
+@mixin largura($largura: 100%) {
+    width: $largura;
+}
+
+@function px2rem($tamAlvo, $tamBase: 16px) {
+    @return math.div($tamAlvo, $tamBase) + rem;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+header {
+    background-color: variaveis.$corDeFundoHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: px2rem(16px) 0;
+    }
+}
+
+section {
+    padding: px2rem(56px) 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    @include largura();
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: px2rem(24px);
+
+        a {
+            color: variaveis.$corBaseBranco;
+            text-decoration: none;
+        }
+    }
+}
+
+.products {
+    @include largura();
+    margin-top: px2rem(40px);
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+}
+
+.product-item {
+    img {
+        @include largura();
+        border-radius: px2rem(16px);
+    }
+}
+
+.product-button {
+    display: block;
+    background-color: variaveis.$corDeFundoBotao;
+    color: variaveis.$corBaseBranco;
+    text-align: center;
+    padding: px2rem(8px) 0;
+    border-radius: px2rem(8px);
+    margin-top: px2rem(8px);
+    text-decoration: none;
+
+    &:hover {
+        background-color: variaveis.$corDeFundoBotaoHover;
+    }
+}
+
+@media screen and (max-width: variaveis.$bpTablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$bpMobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item {
+        margin-bottom: px2rem(32px);
+    }
+}
