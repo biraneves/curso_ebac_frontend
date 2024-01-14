@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".item a").forEach(function(ಠ_ಠ869){ಠ_ಠ869.addEventListener("click",function(){var ಠ_ಠ869=this.parentNode.getElementsByTagName("h3")[0].innerText;alert(`Você clicou no botão da imagem "${ಠ_ಠ869}"`)})})});

@@ -1,0 +1,155 @@
+@use 'config/reset';
+@use 'config/vars';
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+@function px2rem($tamanhoDest, $tamanhoBase: 16px) {
+    @return math.div($tamanhoDest, $tamanhoBase) + rem;
+}
+
+@mixin w100 {
+    width: 100%;
+}
+
+@mixin cabERod {
+    background-color: vars.$corDeFundo;
+    padding: px2rem(16px);
+}
+
+* {
+    font-family: vars.$fonteBase;
+    color: vars.$corBaseTexto;
+}
+
+header {
+    @include cabERod();
+
+    img {
+        height: px2rem(80px);
+        border-radius: px2rem(4px);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            display: block;
+            margin-left: px2rem(16px);
+
+            a {
+                font-family: vars.$fonteTitulo;
+                font-weight: bold;
+                color: vars.$corBaseBranco;
+                text-decoration: none;
+                font-size: px2rem(18px);
+            }
+        }
+    }
+}
+
+main {
+    background-color: vars.$corDeFundoClara;
+
+    .container {
+        padding: px2rem(60px) 0;
+    }
+}
+
+h2 {
+    font-family: vars.$fonteTitulo;
+    font-size: px2rem(24px);
+    font-weight: bold;
+    margin-bottom: px2rem(16px);
+    color: vars.$corTitulo;
+}
+
+.container {
+    max-width: 960px;
+    @include w100;
+    margin: 0 auto;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    column-gap: 2%;
+    row-gap: 4%;
+}
+
+.item {
+    background-color: vars.$corBaseBranco;
+    border-radius: px2rem(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        @include w100;
+        border-top-left-radius: px2rem(6px);
+        border-top-right-radius: px2rem(6px);
+    }
+
+    h3 {
+        @include w100;
+        font-family: vars.$fonteTitulo;
+        color: vars.$corTitulo;
+        margin: px2rem(16px) 0;
+        padding: 0 px2rem(16px);
+        font-size: px2rem(20px);
+        text-align: left;
+    }
+
+    p {
+        margin: 0 px2rem(16px);
+        line-height: px2rem(20px);
+    }
+
+    a {
+        width: 90%;
+        display: block;
+        margin: px2rem(16px) px2rem(8px);
+        border: none;
+        border-radius: px2rem(4px);
+        padding: px2rem(12px) px2rem(8px);
+        background-color: vars.$corFundoBotao;
+        color: vars.$corBaseBranco;
+        font-family: vars.$fonteTitulo;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: px2rem(2px);
+
+        &:hover {
+            background-color: vars.$corFundoBotaoHover;
+            color: vars.$corFundoBotao;
+        }
+    }
+}
+
+footer {
+    @include cabERod();
+    font-family: vars.$fonteBase;
+
+    p {
+        color: vars.$corBaseBranco;
+        text-align: center;
+        font-size: px2rem(14px);
+        line-height: px2rem(18px);
+
+        strong {
+            color: vars.$corBaseBranco;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: vars.$corDeFundoClara;
+        }
+    }
+}
